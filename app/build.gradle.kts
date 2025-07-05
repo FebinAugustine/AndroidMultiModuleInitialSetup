@@ -1,20 +1,23 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+//import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+//    alias(libs.plugins.android.application)
+//    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.initialsetup.android.application)
     alias(libs.plugins.kotlin.compose)
+
+
 }
 
 android {
     namespace = "com.febin.initialsetup"
-    compileSdk = 35
+//    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.febin.initialsetup"
-        minSdk = 24
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+//        applicationId = "com.febin.initialsetup"
+//        minSdk = 24
+//        targetSdk = 35
+//        versionCode = 1
+//        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,10 +31,10 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
+//    compileOptions {
+//        sourceCompatibility = JavaVersion.VERSION_11
+//        targetCompatibility = JavaVersion.VERSION_11
+//    }
 
     buildFeatures {
         compose = true
@@ -39,13 +42,13 @@ android {
 }
 
 // Add or modify the kotlin block like this:
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.fromTarget(libs.versions.kotlinJvmTarget.get()))
-        // You might have other compiler options here as well
-        // freeCompilerArgs.add("-Xcontext-receivers") // Example
-    }
-}
+//kotlin {
+//    compilerOptions {
+//        jvmTarget.set(JvmTarget.fromTarget(libs.versions.kotlinJvmTarget.get()))
+//        // You might have other compiler options here as well
+//        // freeCompilerArgs.add("-Xcontext-receivers") // Example
+//    }
+//}
 
 dependencies {
 

@@ -13,13 +13,18 @@ material = "1.12.0"
 jetbrainsKotlinJvm = "2.2.0"
 kotlinJvmTarget = "11"
 
+androidTools = "31.11.0"
+ksp = "2.1.20-1.0.32"
+room = "2.6.1"
+desugar_jdk_libs = "2.1.5"
+
 # PROJECT VERSIONS
 projectApplicationId = "com.febin.initialsetup"
-projectMinSdk = "24"
-projectTargetSdk = "35"
+projectMinSdkVersion = "24"
+projectTargetSdkVersion = "35"
 projectVersionCode = "1"
 projectVersionName = "1.0"
-projectCompileSdk = "35"
+projectCompileSdkVersion = "35"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,10 +44,27 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+# Added for build logic
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+initialsetup-android-application = {id ="initialsetup.android.application", version = "unspecified"}
+
+
+# Gradle
+
+
+
+
 
