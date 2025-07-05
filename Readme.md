@@ -9,11 +9,14 @@
 * ui
 
 ## Create a separate Build Logic for handling gradle configurations
-### create convention plugins
+### Create convention plugins
 * Android Application Convention Plugin
-  * Create additional kotlin files in the convention folder
+  * Create additional kotlin utility files in the java.com.yourDomainName.convention folder
     * Project Extension
     * Extension Types
     * Kotlin
     * Build Types
+* Android Application Compose Convention Plugin
+  * Create a utility function Android Compose
+  #### Moved build feature and compose dependencies to build logic convention plugin
 * Android Library Convention Plugin

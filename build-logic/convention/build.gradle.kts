@@ -8,7 +8,7 @@ dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.android.tools.common)
     compileOnly(libs.kotlin.gradlePlugin)
-    compileOnly(libs.ksp.gradlePlugin)
+//    compileOnly(libs.ksp.gradlePlugin)
 //    compileOnly(libs.room.gradlePlugin)
 }
 
@@ -17,6 +17,10 @@ gradlePlugin {
         register("androidApplication") {
             id = "initialsetup.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
+        }
+        register("androidApplicationCompose") {
+            id = "initialsetup.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
     }
 }
