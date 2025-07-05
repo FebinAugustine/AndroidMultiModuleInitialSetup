@@ -1,4 +1,4 @@
-#Initial Setup For Multi-Modular Android Mobile App
+# Initial Setup For Multi-Modular Android Mobile App
 
 ## Create a new project
 ## Create a separate Build Logic for handling gradle configurations
