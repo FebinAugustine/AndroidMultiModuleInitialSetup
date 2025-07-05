@@ -20,3 +20,4 @@
   * Create a utility function Android Compose
   #### Moved build feature and compose dependencies to build logic convention plugin
 * Android Library Convention Plugin
+  * Used in the android library module that does not use compose, like data layer
