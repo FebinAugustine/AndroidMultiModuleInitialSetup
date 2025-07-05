@@ -64,6 +64,7 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 initialsetup-android-application = {id ="initialsetup.android.application", version = "unspecified"}
 initialsetup-android-application-compose = {id ="initialsetup.android.application.compose", version = "unspecified"}
 initialsetup-android-library = {id ="initialsetup.android.library", version = "unspecified"}
+initialsetup-android-library-compose = {id ="initialsetup.android.library.compose", version = "unspecified"}
 
 
 # Gradle
