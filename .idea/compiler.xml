@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Initial_Setup.app" target="21" />
+      <module name="Initial_Setup.auth.data" target="21" />
+      <module name="Initial_Setup.auth.domain" target="11" />
+      <module name="Initial_Setup.auth.domain.main" target="11" />
+      <module name="Initial_Setup.auth.domain.test" target="11" />
+      <module name="Initial_Setup.auth.presentation" target="21" />
+      <module name="Initial_Setup.core.data" target="21" />
+      <module name="Initial_Setup.core.database" target="21" />
+      <module name="Initial_Setup.core.domain" target="11" />
+      <module name="Initial_Setup.core.domain.main" target="11" />
+      <module name="Initial_Setup.core.domain.test" target="11" />
+      <module name="Initial_Setup.core.presentation.designsystem" target="21" />
+      <module name="Initial_Setup.core.presentation.ui" target="21" />
+      <module name="InitialSetup.build-logic.convention" target="11" />
+      <module name="InitialSetup.build-logic.convention.main" target="11" />
+      <module name="InitialSetup.build-logic.convention.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
