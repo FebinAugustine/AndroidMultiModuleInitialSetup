@@ -31,3 +31,5 @@
   * for Domain layers
   * Kotlin Library
   * add kotlin specific JVM configuration to Kotlin utility file
+* Ktor Convention Plugin
+  * add this in app module and data layers using Ktor build.gradle file
