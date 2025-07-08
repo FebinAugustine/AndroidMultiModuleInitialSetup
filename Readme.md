@@ -23,3 +23,11 @@
   * Used in the android library module that does not use compose, like data layer
 * Android Library Compose Convention Plugin
   * This is for presentation layer in core module where design system and ui are there.
+* Android Feature Ui Convention Plugin
+  * This is for all feature presentation layer modules
+* Android Room Convention Plugin
+  * This is for Room database
+* Android JVM Library Convention Plugin
+  * for Domain layers
+  * Kotlin Library
+  * add kotlin specific JVM configuration to Kotlin utility file
