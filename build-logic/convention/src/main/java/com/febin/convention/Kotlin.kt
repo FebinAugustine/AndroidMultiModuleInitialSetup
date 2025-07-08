@@ -35,7 +35,7 @@ internal fun Project.configureKotlinAndroid(
         "coreLibraryDesugaring"(libs.findLibrary("desugar.jdk.libs").get())
     }
 }
-// for plain kotlin library modules
+// for plain kotlin library modules, like Domain layer
 internal fun Project.configureKotlinJvm() {
     extensions.configure<JavaPluginExtension> {
         sourceCompatibility = JavaVersion.VERSION_11

@@ -18,7 +18,7 @@ ksp = "2.2.0-2.0.2"
 room = "2.7.2"
 desugar_jdk_libs = "2.1.5"
 koin = "4.1.0"
-annotation = "1.9.1"
+coroutines = "1.10.2"
 
 # PROJECT VERSIONS
 projectApplicationId = "com.febin.initialsetup"
@@ -71,7 +71,9 @@ koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = 
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
 
-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines"}
+
 
 
 [plugins]
@@ -89,6 +91,7 @@ initialsetup-android-library = {id ="initialsetup.android.library", version = "u
 initialsetup-android-library-compose = {id ="initialsetup.android.library.compose", version = "unspecified"}
 initialsetup-android-feature-ui = { id = "initialsetup.android.feature.ui", version = "unspecified" }
 initialsetup-android-room = { id = "initialsetup.android.room", version = "unspecified" }
+initialsetup-jvm-library = { id = "initialsetup.jvm.library", version = "unspecified" }
 
 
 [bundles]
