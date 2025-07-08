@@ -14,10 +14,11 @@ jetbrainsKotlinJvm = "2.2.0"
 kotlinJvmTarget = "11"
 
 androidTools = "31.11.0"
-ksp = "2.1.20-1.0.32"
-#room = "2.6.1"
+ksp = "2.2.0-2.0.2"
+room = "2.7.2"
 desugar_jdk_libs = "2.1.5"
 koin = "4.1.0"
+annotation = "1.9.1"
 
 # PROJECT VERSIONS
 projectApplicationId = "com.febin.initialsetup"
@@ -26,6 +27,7 @@ projectTargetSdkVersion = "35"
 projectVersionCode = "1"
 projectVersionName = "1.0"
 projectCompileSdkVersion = "35"
+roomGradlePlugin = "2.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -57,11 +59,19 @@ android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", ver
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
 
+# Room Specific
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+
 # Koin
 koin-android-workmanager = { group = "io.insert-koin", name = "koin-androidx-workmanager", version.ref = "koin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 
 
 [plugins]
@@ -71,12 +81,14 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+room = { id = "androidx.room", version.ref = "room" }
 
 initialsetup-android-application = {id ="initialsetup.android.application", version = "unspecified"}
 initialsetup-android-application-compose = {id ="initialsetup.android.application.compose", version = "unspecified"}
 initialsetup-android-library = {id ="initialsetup.android.library", version = "unspecified"}
 initialsetup-android-library-compose = {id ="initialsetup.android.library.compose", version = "unspecified"}
 initialsetup-android-feature-ui = { id = "initialsetup.android.feature.ui", version = "unspecified" }
+initialsetup-android-room = { id = "initialsetup.android.room", version = "unspecified" }
 
 
 [bundles]

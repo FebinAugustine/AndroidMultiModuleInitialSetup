@@ -5,11 +5,12 @@ group = "com.febin.initialsetup.buildlogic"
 
 dependencies {
 
+
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.android.tools.common)
     compileOnly(libs.kotlin.gradlePlugin)
-//    compileOnly(libs.ksp.gradlePlugin)
-//    compileOnly(libs.room.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
+    compileOnly(libs.room.gradlePlugin)
 }
 
 gradlePlugin {
@@ -33,6 +34,10 @@ gradlePlugin {
         register("androidFeatureUi") {
             id = "initialsetup.android.feature.ui"
             implementationClass = "AndroidFeatureUiConventionPlugin"
+        }
+        register("androidRoom") {
+            id = "initialsetup.android.room"
+            implementationClass = "AndroidRoomConventionPlugin"
         }
     }
 }

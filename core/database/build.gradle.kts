@@ -3,7 +3,17 @@ plugins {
 //    alias(libs.plugins.android.library)
 //    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.initialsetup.android.library)
+    alias(libs.plugins.initialsetup.android.room)
+
+//    alias(libs.plugins.room)
+//    alias(libs.plugins.ksp)
+
+
 }
+
+//room {
+//    schemaDirectory("$projectDir/schemas")
+//}
 
 android {
     namespace = "com.febin.core.database"
@@ -42,12 +52,17 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+//    implementation(libs.androidx.core.ktx)
+//    implementation(libs.androidx.appcompat)
+//    implementation(libs.material)
+//    testImplementation(libs.junit)
+//    androidTestImplementation(libs.androidx.junit)
+//    androidTestImplementation(libs.androidx.espresso.core)
+
+//    implementation(libs.room.runtime)
+//    implementation(libs.room.ktx)
+//    ksp(libs.room.compiler)
 
     implementation(projects.core.domain)
+
 }
