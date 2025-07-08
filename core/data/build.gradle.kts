@@ -3,6 +3,7 @@ plugins {
 //    alias(libs.plugins.android.library)
 //    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.initialsetup.android.library)
+    alias(libs.plugins.initialsetup.jvm.ktor)
 }
 
 android {

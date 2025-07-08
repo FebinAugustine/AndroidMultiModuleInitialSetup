@@ -1,5 +1,13 @@
 plugins {
     `kotlin-dsl`
+//    alias(libs.plugins.kotlin.serialization)
+
+}
+repositories {
+    // Ensure these are here to resolve plugins for build-logic itself
+    gradlePluginPortal()
+    google()
+    mavenCentral()
 }
 group = "com.febin.initialsetup.buildlogic"
 
@@ -11,6 +19,7 @@ dependencies {
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
     compileOnly(libs.room.gradlePlugin)
+
 }
 
 gradlePlugin {
@@ -42,6 +51,10 @@ gradlePlugin {
         register("jvmLibrary") {
             id = "initialsetup.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
+        }
+        register("jvmKtor") {
+            id = "initialsetup.jvm.ktor"
+            implementationClass = "JvmKtorConventionPlugin"
         }
     }
 }

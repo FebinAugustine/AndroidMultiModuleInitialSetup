@@ -4,6 +4,7 @@ plugins {
 //    alias(libs.plugins.kotlin.android)
 //    alias(libs.plugins.initialsetup.android.application)
     alias(libs.plugins.initialsetup.android.application.compose)
+    alias(libs.plugins.initialsetup.jvm.ktor)
 
 
 }

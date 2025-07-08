@@ -18,6 +18,10 @@ ksp = "2.2.0-2.0.2"
 room = "2.7.2"
 desugar_jdk_libs = "2.1.5"
 koin = "4.1.0"
+ktor = "3.2.1"
+ktorClientLogging = "3.2.0"
+kotlinx-serialization = "1.9.0" # This is the kotlinx.serialization library version
+kotlin-serialization = "2.2.0"
 coroutines = "1.10.2"
 
 # PROJECT VERSIONS
@@ -27,7 +31,7 @@ projectTargetSdkVersion = "35"
 projectVersionCode = "1"
 projectVersionName = "1.0"
 projectCompileSdkVersion = "35"
-roomGradlePlugin = "2.7.2"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -58,6 +62,7 @@ android-tools-common = { group = "com.android.tools", name = "common", version.r
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 # Room Specific
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
@@ -65,11 +70,19 @@ room-compiler = { group = "androidx.room", name = "room-compiler", version.ref =
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 
-# Koin
+# Koin Specific
 koin-android-workmanager = { group = "io.insert-koin", name = "koin-androidx-workmanager", version.ref = "koin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+
+# Ktor specific
+ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLogging" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
 
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines"}
@@ -84,6 +97,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 room = { id = "androidx.room", version.ref = "room" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization" }
 
 initialsetup-android-application = {id ="initialsetup.android.application", version = "unspecified"}
 initialsetup-android-application-compose = {id ="initialsetup.android.application.compose", version = "unspecified"}
@@ -92,6 +106,7 @@ initialsetup-android-library-compose = {id ="initialsetup.android.library.compos
 initialsetup-android-feature-ui = { id = "initialsetup.android.feature.ui", version = "unspecified" }
 initialsetup-android-room = { id = "initialsetup.android.room", version = "unspecified" }
 initialsetup-jvm-library = { id = "initialsetup.jvm.library", version = "unspecified" }
+initialsetup-jvm-ktor = { id = "initialsetup.jvm.ktor", version = "unspecified" }
 
 
 [bundles]
@@ -111,7 +126,14 @@ compose-debug = [
 koin = ["koin-core", "koin-android", "koin-android-workmanager"]
 koin-compose = ["koin-core", "koin-android", "koin-android-workmanager", "koin-androidx-compose"]
 
-
+ktor = [
+    "ktor-client-auth",
+    "ktor-client-cio",
+    "ktor-client-content-negotiation",
+    "ktor-client-core",
+    "ktor-client-logging",
+    "ktor-serialization-kotlinx-json"
+]
 
 
 

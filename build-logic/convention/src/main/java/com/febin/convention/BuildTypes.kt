@@ -24,9 +24,12 @@ internal fun Project.configureBuildTypes(
                     buildTypes {
                         debug {
                             configureDebugBuildType(apiKey)
+                            isMinifyEnabled = false
+                            isShrinkResources = false
                         }
                         release {
                             configureReleaseBuildType(commonExtension, apiKey)
+                            isMinifyEnabled = false
                         }
                     }
                 }
@@ -36,9 +39,12 @@ internal fun Project.configureBuildTypes(
                     buildTypes {
                         debug {
                             configureDebugBuildType(apiKey)
+                            isMinifyEnabled = false
+                            isShrinkResources = false
                         }
                         release {
                             configureReleaseBuildType(commonExtension, apiKey)
+                            isMinifyEnabled = false
                         }
                     }
                 }
